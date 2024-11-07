@@ -12,7 +12,7 @@
   <body>
     <div class="container">
       <h1> Form Biodata Mahasiswa</h1>
-      <form action="" method="POST">
+      <form action="" method="GET">
         <label for="NIM">NIM</label><input type="text" name="NIM" value="" id="NIM">
         <label for="Nama">Nama</label><input type="text" name="Nama" value="" id="Nama">
 
