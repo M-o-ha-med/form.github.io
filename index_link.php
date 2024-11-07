@@ -1,5 +1,5 @@
 <?php
-      include download.php;
+      include 'download.php';
       if ($_SERVER["REQUEST_METHOD"] == "GET") {
         $nim = $_GET['NIM'];
         $nama = $_GET['Nama'];
