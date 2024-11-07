@@ -33,12 +33,12 @@
       <?php
       if ($_SERVER["REQUEST_METHOD"] == "GET") {
       session_start();
-      $_SESSION['NIM'] = $_POST['NIM'];
-      $_SESSION['Nama'] = $_POST['Nama'];
-      $_SESSION['Jenis_kelamin'] = $_POST['Jenis_kelamin'];
-      $_SESSION['Alamat'] = $_POST['Alamat'];
-      $_SESSION['Nomor_telepon'] = $_POST['Nomor_telepon'];
-      $_SESSION['Email'] =   $_POST['Email'];
+      $_SESSION['NIM'] = $_GET['NIM'];
+      $_SESSION['Nama'] = $_GET['Nama'];
+      $_SESSION['Jenis_kelamin'] = $_GET['Jenis_kelamin'];
+      $_SESSION['Alamat'] = $_GET['Alamat'];
+      $_SESSION['Nomor_telepon'] = $_GET['Nomor_telepon'];
+      $_SESSION['Email'] =   $_GET['Email'];
       echo "<h3>Data berhasil disimpan!</h3>";
       echo "<a href='download.php'>Download csv</a>";
 
