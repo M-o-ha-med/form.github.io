@@ -31,7 +31,7 @@
 
       </form>
       <?php
-      if ($_SERVER["REQUEST_METHOD"] == "POST") {
+      if ($_SERVER["REQUEST_METHOD"] == "GET") {
       session_start();
       $_SESSION['NIM'] = $_POST['NIM'];
       $_SESSION['Nama'] = $_POST['Nama'];
