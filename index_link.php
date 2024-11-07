@@ -7,8 +7,9 @@
         $alamat = $_GET['Alamat'];
         $notelp = $_GET['Nomor_telepon'];
         $email = $_GET['Email'];
+        $getts = generateCSV($nim, $nama, $gender, $alamat, $notelp, $email);
       echo "<h3>Data berhasil disimpan!</h3>";
-      echo "<a href='#' onclick=\"generateCSV($nim, $nama, $gender, $alamat, $notelp, $email);\">Download CSV</a>";
+      echo "<a href='#' onclick='$getts'>Download CSV</a>";
       
       }
 
