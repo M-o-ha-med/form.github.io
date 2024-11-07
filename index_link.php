@@ -12,8 +12,6 @@
                 // Panggil fungsi generateCSV dari download.php untuk mengunduh CSV
                 generateCSV($nim, $nama, $gender, $alamat, $notelp, $email);
             }
-      echo "<h3>Data berhasil disimpan!</h3>";
-      echo "<a href='?download_csv=1&NIM=$nim&Nama=$nama&Jenis_kelamin=$gender&Alamat=$alamat&Nomor_telepon=$notelp&Email=$email'>Download CSV</a>";
       
       }
 
@@ -50,7 +48,10 @@
 
 
       </form> 
-      
+      <?PHP
+       echo "<h3>Data berhasil disimpan!</h3>";
+       echo "<a href='?download_csv=1&NIM=$nim&Nama=$nama&Jenis_kelamin=$gender&Alamat=$alamat&Nomor_telepon=$notelp&Email=$email'>Download CSV</a>";
+      ?>
     </div>
 
 
