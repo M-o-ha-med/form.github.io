@@ -22,6 +22,7 @@
         }        
         // Close the file pointer
         fclose($fp);
+        exit;
       echo "<h3>Data berhasil disimpan!</h3>";
       }
       ?>
