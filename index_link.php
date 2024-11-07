@@ -8,8 +8,21 @@
         $notelp = $_GET['Nomor_telepon'];
         $email = $_GET['Email'];
       echo "<h3>Data berhasil disimpan!</h3>";
-      echo "<a href='#' onclick='generateCSV($nim, $nama, $gender, $alamat, $notelp, $email)'>Download CSV</a>";
-      }
+      echo "<a href='?download_csv=1&NIM=$nim&Nama=$nama&Jenis_kelamin=$gender&Alamat=$alamat&Nomor_telepon=$notelp&Email=$email'>Download CSV</a>";
+}
+
+// Cek jika parameter untuk download CSV ada
+if (isset($_GET['download_csv']) && $_GET['download_csv'] == 1) {
+    $nim = $_GET['NIM'];
+    $nama = $_GET['Nama'];
+    $gender = $_GET['Jenis_kelamin'];
+    $alamat = $_GET['Alamat'];
+    $notelp = $_GET['Nomor_telepon'];
+    $email = $_GET['Email'];
+
+    // Panggil fungsi generateCSV dari download.php
+    generateCSV($nim, $nama, $gender, $alamat, $notelp, $email);
+}
       ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
