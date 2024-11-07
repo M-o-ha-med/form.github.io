@@ -1,5 +1,6 @@
 <?php
       include 'download.php';
+
       if ($_SERVER["REQUEST_METHOD"] == "GET") {
         $nim = $_GET['NIM'];
         $nama = $_GET['Nama'];
@@ -7,9 +8,12 @@
         $alamat = $_GET['Alamat'];
         $notelp = $_GET['Nomor_telepon'];
         $email = $_GET['Email'];
-        $getts = generateCSV($nim, $nama, $gender, $alamat, $notelp, $email);
+        if (isset($_GET['download_csv']) && $_GET['download_csv'] == 1) {                
+                // Panggil fungsi generateCSV dari download.php untuk mengunduh CSV
+                generateCSV($nim, $nama, $gender, $alamat, $notelp, $email);
+            }
       echo "<h3>Data berhasil disimpan!</h3>";
-      echo "<a href='#' onclick='$getts'>Download CSV</a>";
+      echo "<a href='?download_csv=1&NIM=$nim&Nama=$nama&Jenis_kelamin=$gender&Alamat=$alamat&Nomor_telepon=$notelp&Email=$email'>Download CSV</a>";
       
       }
 
